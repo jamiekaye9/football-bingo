@@ -30,7 +30,8 @@ const listOfPlayers = [
     { fullName: "Mike Maignan", currentClub: "AC Milan", country: "France", position: "Goalkeeper" },
     { fullName: "Theo Hernandez", currentClub: "AC Milan", country: "France", position: "Defender" },
     { fullName: "Ousmane Dembele", currentClub: "Paris Saint-Germain", country: "France", position: "Forward" },
-    { fullName: "Gianluigi Donnarumma", currentClub: "Paris Saint-Germain", country: "Italy", position: "Goalkeeper" }
+    { fullName: "Gianluigi Donnarumma", currentClub: "Paris Saint-Germain", country: "Italy", position: "Goalkeeper" }, 
+    { fullName: "Martin Odegaard", currentClub: "Arsenal", country: "Norway", position: "Midfielder" }
 ]
 
 // const identifiersWithDups = listOfPlayers.flatMap(player => [player.country, player.currentClub, player.position])
@@ -40,34 +41,34 @@ const listOfPlayers = [
 const listOfStats = [
     {statName: 'Manchester City', image: "../images/mcfclogo.png"}, 
     {statName: 'Manchester United', image: "../images/mufclogo.png"}, 
-    {statName: 'Arsenal', image: ""}, 
-    {statName: 'Liverpool', image: ""}, 
-    {statName: 'Chelsea', image: ""}, 
-    {statName: 'Barcelona', image: ""}, 
+    {statName: 'Arsenal', image: "../images/arsenallogo.png"}, 
+    {statName: 'Liverpool', image: "../images/liverpoollogo.png"}, 
+    {statName: 'Chelsea', image: "../images/chelsealogo.png"}, 
+    {statName: 'Barcelona', image: "../images/barcelonalogo.png"}, 
     {statName: 'Real Madrid', image: "../images/realmadridlogo.png"}, 
-    {statName: 'Inter Miami', image: ""}, 
-    {statName: 'AC Milan', image: ""}, 
-    {statName: 'Bayern Munich', image: ""}, 
-    {statName: 'Paris Saint-Germain', image: ""}, 
-    {statName: 'England', image: ""}, 
-    {statName: 'Morocco', image: ""}, 
-    {statName: 'Portugal', image: ""}, 
-    {statName: 'Spain', image: ""}, 
-    {statName: 'Argentina', image: ""}, 
-    {statName: 'France', image: ""}, 
-    {statName: 'Egypt', image: ""}, 
-    {statName: 'Italy', image: ""}, 
-    {statName: 'Poland', image: ""}, 
-    {statName: 'Brazil', image: ""}, 
-    {statName: 'Uraguay', image: ""}, 
-    {statName: 'Norway', image: ""}, 
-    {statName: 'Netherlands', image: ""}, 
-    {statName: 'Belgium', image: ""}, 
-    {statName: 'Germany', image: ""}, 
-    {statName: 'Goalkeeper', image: ""}, 
-    {statName: 'Defender', image: ""}, 
-    {statName: 'Midfielder', image: ""}, 
-    {statName: 'Forward', image: ""}
+    {statName: 'Inter Miami', image: "../images/intermiamilogo.png"}, 
+    {statName: 'AC Milan', image: "../images/acmilanlogo.png"}, 
+    {statName: 'Bayern Munich', image: "../images/bayernmunichlogo.png"}, 
+    {statName: 'Paris Saint-Germain', image: "../images/psglogo.png"}, 
+    {statName: 'England', image: "../images/englandflag.png"}, 
+    {statName: 'Morocco', image: "../images/moroccoflag.png"}, 
+    {statName: 'Portugal', image: "../images/portugalflag.png"}, 
+    {statName: 'Spain', image: "../images/spainflag.png"}, 
+    {statName: 'Argentina', image: "../images/argentinaflag.png"}, 
+    {statName: 'France', image: "../images/franceflag.png"}, 
+    {statName: 'Egypt', image: "../images/egyptflag.png"}, 
+    {statName: 'Italy', image: "../images/italyflag.png"}, 
+    {statName: 'Poland', image: "../images/polandflag.png"}, 
+    {statName: 'Brazil', image: "../images/brazilflag.png"}, 
+    {statName: 'Uruguay', image: "../images/uruguayflag.png"}, 
+    {statName: 'Norway', image: "../images/norwayflag.png"}, 
+    {statName: 'Netherlands', image: "../images/netherlandsflag.png"}, 
+    {statName: 'Belgium', image: "../images/belgiumflag.png"}, 
+    {statName: 'Germany', image: "../images/germanyflag.png"}, 
+    {statName: 'Goalkeeper', image: "../images/goalkeeper.png"}, 
+    {statName: 'Defender', image: "../images/defender.png"}, 
+    {statName: 'Midfielder', image: "../images/midfielder.png"}, 
+    {statName: 'Forward', image: "../images/forward.png"}
 ]
 
 /*---------------------------- Variables (state) ----------------------------*/
@@ -190,7 +191,7 @@ const skipPlayer = (event) => {
 const gameEndNoBingo = () => {
     if(bingo === true) {
         return
-    } else if (choiceIndex === 29) {
+    } else if (choiceIndex === listOfPlayers.length - 1) {
         gameEnd = true
         updateMessage()
         return
