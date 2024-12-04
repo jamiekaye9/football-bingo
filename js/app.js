@@ -34,10 +34,6 @@ const listOfPlayers = [
     { fullName: "Martin Odegaard", currentClub: "Arsenal", country: "Norway", position: "Midfielder" }
 ]
 
-// const identifiersWithDups = listOfPlayers.flatMap(player => [player.country, player.currentClub, player.position])
-
-// const identifiers = [...new Set(identifiersWithDups)]
-
 const listOfStats = [
     {statName: 'Manchester City', image: "../images/mcfclogo.png"}, 
     {statName: 'Manchester United', image: "../images/mufclogo.png"}, 
@@ -123,16 +119,6 @@ const handleClick = (event) => {
             event.currentTarget.style.border = '3px solid red'
         }
     }
-    // } else {
-    //     boxesTicked.push(boxIndex)
-    //     if (event.target.textContent === listOfPlayers[choiceIndex].country || event.target.textContent === listOfPlayers[choiceIndex].currentClub || event.target.textContent === listOfPlayers[choiceIndex].position) {
-    //         event.target.style.border = '3px solid green'
-    //         boxesTickedGreen.push(boxIndex)
-    //         points = (points + 1) 
-    //     } else if (event.target.textContent !== listOfPlayers[choiceIndex].country && event.target.textContent !== listOfPlayers[choiceIndex].currentClub && event.target.textContent !== listOfPlayers[choiceIndex].position) {
-    //         event.target.style.border = '3px solid red'
-    //     }
-    // }
     choiceIndex = (choiceIndex + 1)
     choices()
     gameEndBingo()
@@ -218,10 +204,6 @@ const gameStarted = (event) => {
     boxes.forEach(box => {
         box.addEventListener('click', handleClick)
     })
-    // // shuffle(identifiers)
-    // // boxes.forEach((box, i) => {
-    // //     box.textContent = identifiers[i]
-    // })
     shuffle(listOfStats)
     boxes.forEach((box, i) => {
         const img = document.createElement('img')
@@ -230,9 +212,7 @@ const gameStarted = (event) => {
         img.style.height = '60px'
         img.style.width = '60px'
         boxes[i].appendChild(img)
-    }
-
-    )
+    })
     shuffle(listOfPlayers)
     choices()
     updateMessage()
