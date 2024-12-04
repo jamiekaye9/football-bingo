@@ -33,10 +33,42 @@ const listOfPlayers = [
     { fullName: "Gianluigi Donnarumma", currentClub: "Paris Saint-Germain", country: "Italy", position: "Goalkeeper" }
 ]
 
-const identifiersWithDups = listOfPlayers.flatMap(player => [player.country, player.currentClub, player.position])
+// const identifiersWithDups = listOfPlayers.flatMap(player => [player.country, player.currentClub, player.position])
 
-const identifiers = [...new Set(identifiersWithDups)]
+// const identifiers = [...new Set(identifiersWithDups)]
 
+const listOfStats = [
+    {statName: 'Manchester City', image: "../images/mcfclogo.png"}, 
+    {statName: 'Manchester United', image: "../images/mufclogo.png"}, 
+    {statName: 'Arsenal', image: ""}, 
+    {statName: 'Liverpool', image: ""}, 
+    {statName: 'Chelsea', image: ""}, 
+    {statName: 'Barcelona', image: ""}, 
+    {statName: 'Real Madrid', image: "../images/realmadridlogo.png"}, 
+    {statName: 'Inter Miami', image: ""}, 
+    {statName: 'AC Milan', image: ""}, 
+    {statName: 'Bayern Munich', image: ""}, 
+    {statName: 'Paris Saint-Germain', image: ""}, 
+    {statName: 'England', image: ""}, 
+    {statName: 'Morocco', image: ""}, 
+    {statName: 'Portugal', image: ""}, 
+    {statName: 'Spain', image: ""}, 
+    {statName: 'Argentina', image: ""}, 
+    {statName: 'France', image: ""}, 
+    {statName: 'Egypt', image: ""}, 
+    {statName: 'Italy', image: ""}, 
+    {statName: 'Poland', image: ""}, 
+    {statName: 'Brazil', image: ""}, 
+    {statName: 'Uraguay', image: ""}, 
+    {statName: 'Norway', image: ""}, 
+    {statName: 'Netherlands', image: ""}, 
+    {statName: 'Belgium', image: ""}, 
+    {statName: 'Germany', image: ""}, 
+    {statName: 'Goalkeeper', image: ""}, 
+    {statName: 'Defender', image: ""}, 
+    {statName: 'Midfielder', image: ""}, 
+    {statName: 'Forward', image: ""}
+]
 
 /*---------------------------- Variables (state) ----------------------------*/
 
@@ -72,7 +104,7 @@ const skipButton = document.querySelector('#skip')
 /*-------------------------------- Functions --------------------------------*/
 
 const handleClick = (event) => {
-    boxIndex = event.target.id
+    boxIndex = event.currentTarget.id
     if (boxes[boxIndex].style.border === '3px solid green' || boxes[boxIndex].style.border === '3px solid red') {
         return
     } else if (gameStart === false) {
@@ -81,14 +113,25 @@ const handleClick = (event) => {
         return
     } else {
         boxesTicked.push(boxIndex)
-        if (event.target.textContent === listOfPlayers[choiceIndex].country || event.target.textContent === listOfPlayers[choiceIndex].currentClub || event.target.textContent === listOfPlayers[choiceIndex].position) {
-            event.target.style.border = '3px solid green'
+        const statId = listOfStats[boxIndex].statName
+        if(statId === listOfPlayers[choiceIndex].country || statId === listOfPlayers[choiceIndex].currentClub || statId === listOfPlayers[choiceIndex].position) {
+            event.currentTarget.style.border = '3px solid green'
             boxesTickedGreen.push(boxIndex)
-            points = (points + 1) 
-        } else if (event.target.textContent !== listOfPlayers[choiceIndex].country && event.target.textContent !== listOfPlayers[choiceIndex].currentClub && event.target.textContent !== listOfPlayers[choiceIndex].position) {
-            event.target.style.border = '3px solid red'
+            points = (points + 1)
+        } else if(statId !== listOfPlayers[choiceIndex].country && statId !== listOfPlayers[choiceIndex].currentClub && statId !== listOfPlayers[choiceIndex].position) {
+            event.currentTarget.style.border = '3px solid red'
         }
     }
+    // } else {
+    //     boxesTicked.push(boxIndex)
+    //     if (event.target.textContent === listOfPlayers[choiceIndex].country || event.target.textContent === listOfPlayers[choiceIndex].currentClub || event.target.textContent === listOfPlayers[choiceIndex].position) {
+    //         event.target.style.border = '3px solid green'
+    //         boxesTickedGreen.push(boxIndex)
+    //         points = (points + 1) 
+    //     } else if (event.target.textContent !== listOfPlayers[choiceIndex].country && event.target.textContent !== listOfPlayers[choiceIndex].currentClub && event.target.textContent !== listOfPlayers[choiceIndex].position) {
+    //         event.target.style.border = '3px solid red'
+    //     }
+    // }
     choiceIndex = (choiceIndex + 1)
     choices()
     gameEndBingo()
@@ -174,10 +217,21 @@ const gameStarted = (event) => {
     boxes.forEach(box => {
         box.addEventListener('click', handleClick)
     })
-    shuffle(identifiers)
+    // // shuffle(identifiers)
+    // // boxes.forEach((box, i) => {
+    // //     box.textContent = identifiers[i]
+    // })
+    shuffle(listOfStats)
     boxes.forEach((box, i) => {
-        box.textContent = identifiers[i]
-    })
+        const img = document.createElement('img')
+        img.src = listOfStats[i].image
+        img.alt = `${listOfStats[i].statName} image`
+        img.style.height = '60px'
+        img.style.width = '60px'
+        boxes[i].appendChild(img)
+    }
+
+    )
     shuffle(listOfPlayers)
     choices()
     updateMessage()
