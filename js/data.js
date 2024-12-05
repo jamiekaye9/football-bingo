@@ -33,7 +33,7 @@ const listOfPlayers = [
 ]
 
 const listOfStats = [
-    {statName: 'Manchester City', image: "../images/mcfclogo.png"}, 
+    {statName: 'Manchester City', image: "football-bingo/images/mcfclogo.png"}, 
     {statName: 'Manchester United', image: "../images/mufclogo.png"}, 
     {statName: 'Arsenal', image: "../images/arsenallogo.png"}, 
     {statName: 'Liverpool', image: "../images/liverpoollogo.png"}, 
