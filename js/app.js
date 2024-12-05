@@ -30,8 +30,6 @@ const resetButton = document.querySelector('#reset')
 
 const skipButton = document.querySelector('#skip')
 
-
-
 /*-------------------------------- Functions --------------------------------*/
 
 const handleClick = (event) => {
