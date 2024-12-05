@@ -8,7 +8,7 @@ Links: https://jamiekaye9.github.io/football-bingo/
 
 Screenshots:
 
-![starting screen](../images/startingscreen.png)
+![starting screen](football-bingo/images/startingscreen.png)
 
 ![game started](../images/startingscreen-1.png)
 
