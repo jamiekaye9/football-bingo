@@ -9,15 +9,19 @@ Links: https://jamiekaye9.github.io/football-bingo/
 Screenshots:
 
 Starting screen
+
 <img width="518" alt="startingscreen" src="https://github.com/user-attachments/assets/3b3f79ac-7f1d-4b97-89f2-fda6d1daa864">
 
 Game started
+
 <img width="519" alt="loss" src="https://github.com/user-attachments/assets/bf568817-baae-47a4-b29f-ef085631a731">
 
 Win (BINGO)
+
 <img width="490" alt="win" src="https://github.com/user-attachments/assets/efa6abe2-92c6-4543-9d13-88d5d0bb86ae">
 
 Loss
+
 <img width="488" alt="gamestarted" src="https://github.com/user-attachments/assets/4ef1d5d2-bbba-4267-8e52-f35e160a7c98">
 
 
