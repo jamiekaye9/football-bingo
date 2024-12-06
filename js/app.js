@@ -34,7 +34,7 @@ const skipButton = document.querySelector('#skip')
 
 const handleClick = (event) => {
     boxIndex = event.currentTarget.id
-    if (boxes[boxIndex].style.border === '3px solid green' || boxes[boxIndex].style.border === '3px solid red') {
+    if (boxes[boxIndex].style.border === '5px solid green' || boxes[boxIndex].style.border === '5px solid red') {
         return
     } else if (gameStart === false) {
         return
