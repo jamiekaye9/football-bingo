@@ -8,13 +8,9 @@ Links: https://jamiekaye9.github.io/football-bingo/
 
 Screenshots:
 
-![starting screen](football-bingo/images/startingscreen.png)
+Attributions:
 
-![game started](../images/startingscreen-1.png)
-
-![win](../images/win.png)
-
-![loss](../images/loss.png)
+https://www.flaticon.com/ - images
 
 Technologies used: HTML, CSS and Javascript.
 
