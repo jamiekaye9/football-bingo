@@ -10,15 +10,19 @@ Screenshots:
 
 Starting screen
 
+<img src="https://raw.githubusercontent.com/jamiekaye9/football-bingo/refs/heads/main/images/startscreen.png" alt="start screen">
 
 Game started
 
+<img src="https://raw.githubusercontent.com/jamiekaye9/football-bingo/refs/heads/main/images/gamestart.png" alt="game start">
 
 Win (BINGO)
 
+<img src="https://raw.githubusercontent.com/jamiekaye9/football-bingo/refs/heads/main/images/win.png" alt="win">
 
 Loss
 
+<img src="https://raw.githubusercontent.com/jamiekaye9/football-bingo/refs/heads/main/images/loss.png" alt="loss">
 
 Attributions:
 

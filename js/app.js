@@ -126,10 +126,7 @@ const gameEndBingo = () => {
         gameEnd = true
         boxes.forEach(box => {
             box.style.backgroundColor = 'green'
-        }
-
-        )
-        // controlBox.style.backgroundColor = 'gold'
+        })
     }
 }
 
