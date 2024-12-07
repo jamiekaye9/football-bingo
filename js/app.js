@@ -124,9 +124,7 @@ const gameEndBingo = () => {
     if(boxesTickedGreen.length === 16) {
         bingo = true
         gameEnd = true
-        boxes.forEach(box => {
-            box.style.backgroundColor = 'green'
-        })
+        controlBox.style.backgroundColor = 'green'
     }
 }
 
@@ -162,8 +160,8 @@ const init = () => {
     boxes.forEach(box => {
         box.textContent = ''
         box.style.border = '5px solid white'
-        box.style.backgroundColor = '#2e0248'
     })
+    controlBox.style.backgroundColor = '#7404b9'
     bingo = false
     points = 0
     gameEnd = false
