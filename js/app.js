@@ -30,6 +30,8 @@ const resetButton = document.querySelector('#reset')
 
 const skipButton = document.querySelector('#skip')
 
+const controlBox = document.querySelector('#control')
+
 /*-------------------------------- Functions --------------------------------*/
 
 const handleClick = (event) => {
@@ -56,8 +58,6 @@ const handleClick = (event) => {
     gameEndBingo()
     gameEndNoBingo()
     updateMessage()
-    console.log(boxesTickedGreen);
-    
 }
 
 const render = () => {
@@ -124,6 +124,12 @@ const gameEndBingo = () => {
     if(boxesTickedGreen.length === 16) {
         bingo = true
         gameEnd = true
+        boxes.forEach(box => {
+            box.style.backgroundColor = 'green'
+        }
+
+        )
+        // controlBox.style.backgroundColor = 'gold'
     }
 }
 
@@ -159,6 +165,7 @@ const init = () => {
     boxes.forEach(box => {
         box.textContent = ''
         box.style.border = '5px solid white'
+        box.style.backgroundColor = '#2e0248'
     })
     bingo = false
     points = 0
@@ -168,6 +175,7 @@ const init = () => {
     boxesTickedGreen = []
     choiceIndex = 0
     choiceNumber = []
+
     render()
 }
 
