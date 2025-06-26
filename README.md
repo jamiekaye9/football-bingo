@@ -36,7 +36,12 @@ This was a solo project, built in the timeframe of 1 week.
 ## Build/Code Process
 I started this project inside my app.js file, by declaring the game’s key state variables, including tracking whether the game has started or ended, and which boxes have been selected. As someone who likes to simplify concepts through physical examples, I realised this to be my remote control. This helped me to visualise how each variable impacts each other and essentially the player’s journey.
 
-![Project Variables]("https://raw.githubusercontent.com/jamiekaye9/football-bingo/refs/heads/main/images/variables.png")
+![Project Variables](images/variables.png)
+
+Once the game begins, I attach images to the grid boxes dynamically and randomise the display using the Fischer-Yates shuffle method. It was initially daunting to introduce concepts outside of my course material, but researching and implementing this algorithm removed my fear of straying out of my comfort zone and helped me to accept that concepts that initially seemed too complex were not out of my reach.
+
+![Shuffle](images/shuffle.png)
+![Shuffle of player stats](images/shufflestats.png)
 
 
 
