@@ -31,7 +31,7 @@ This was a solo project, built in the timeframe of 1 week.
 
 ## Planning
 ### Wireframes
-![Wireframe](images/Football Bingo.png)
+![Wireframe](images/FootballBingo.png)
 
 ## Build/Code Process
 I started this project inside my app.js file, by declaring the game’s key state variables, including tracking whether the game has started or ended, and which boxes have been selected. As someone who likes to simplify concepts through physical examples, I realised this to be my remote control. This helped me to visualise how each variable impacts each other and essentially the player’s journey.
