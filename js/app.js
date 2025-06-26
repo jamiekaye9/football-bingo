@@ -45,11 +45,15 @@ const handleClick = (event) => {
     } else {
         boxesTicked.push(boxIndex)
         const statId = listOfStats[boxIndex].statName
-        if(statId === listOfPlayers[choiceIndex].country || statId === listOfPlayers[choiceIndex].currentClub || statId === listOfPlayers[choiceIndex].position) {
+        if(statId === listOfPlayers[choiceIndex].country ||
+            statId === listOfPlayers[choiceIndex].currentClub ||
+            statId === listOfPlayers[choiceIndex].position) {
             event.currentTarget.style.border = '5px solid green'
             boxesTickedGreen.push(boxIndex)
             points = (points + 1)
-        } else if(statId !== listOfPlayers[choiceIndex].country && statId !== listOfPlayers[choiceIndex].currentClub && statId !== listOfPlayers[choiceIndex].position) {
+        } else if(statId !== listOfPlayers[choiceIndex].country &&
+            statId !== listOfPlayers[choiceIndex].currentClub && 
+            statId !== listOfPlayers[choiceIndex].position) {
             event.currentTarget.style.border = '5px solid red'
         }
     }
@@ -170,7 +174,6 @@ const init = () => {
     boxesTickedGreen = []
     choiceIndex = 0
     choiceNumber = []
-
     render()
 }
 
